@@ -26,7 +26,7 @@ https://hllmtrxwrld.github.io/Weather-App/
 ## Credits
 
 N/A
-![alt text](./Assets/img/screenShot.png.)
+![alt text](./Assets/img/screenShot.png)
 ## License
 
 N/A
