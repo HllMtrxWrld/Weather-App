@@ -1,0 +1,21 @@
+.today {
+    width: 100%;
+    border: solid;
+    border-width: 1px;
+    border-color: #808080;
+}
+
+.cardContainer {
+    background-color: aliceblue;
+    margin-left: 10px;
+}
+
+.history_button {
+border-radius: 10px;
+margin-bottom: 10px;
+background-color: aquamarine;
+}
+
+.todayEl {
+    margin-left: 10px;
+}
