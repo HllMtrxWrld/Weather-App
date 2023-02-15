@@ -9,7 +9,7 @@ let currentDate = moment().format('DD/MM/YYYY');
 // Function to get current weather
 
 function getCurrentDay(city) {
-    let GeocoderApiURL = "http://api.openweathermap.org/geo/1.0/direct?q=" + city + "&limit=1&appid=" + ApiKey;
+    let GeocoderApiURL = "https://api.openweathermap.org/geo/1.0/direct?q=" + city + "&limit=1&appid=" + ApiKey;
     $.ajax({
         url: GeocoderApiURL,
         method: 'GET'
@@ -22,7 +22,7 @@ function getCurrentDay(city) {
         method: "GET"
     }).then(function (response) {
         let iconIndex = response.list[0].weather[0].icon;
-        let iconURL = 'http://openweathermap.org/img/w/' + iconIndex + ".png";
+        let iconURL = 'https://openweathermap.org/img/w/' + iconIndex + ".png";
         let weaterIcon = $('<img>').attr("src", iconURL);
         let todayName = $('<h3>').text(response.city.name + ' ' + currentDate).addClass('todayEl');
         todayName.append(weaterIcon);
@@ -46,7 +46,7 @@ function getCurrentDay(city) {
 //  Function to get 5 day weather forecast
 
 function getForecast(city) {
-    let GeocoderApiURL = "http://api.openweathermap.org/geo/1.0/direct?q=" + city + "&limit=1&appid=" + ApiKey;
+    let GeocoderApiURL = "https://api.openweathermap.org/geo/1.0/direct?q=" + city + "&limit=1&appid=" + ApiKey;
     $.ajax({
         url: GeocoderApiURL,
         method: 'GET'
@@ -60,7 +60,7 @@ function getForecast(city) {
     }).then(function (response) {
         for (let i = 0; i < 40; i+=8) {
         let iconIndex = response.list[i].weather[0].icon;
-        let iconURL = 'http://openweathermap.org/img/w/' + iconIndex + ".png";
+        let iconURL = 'https://openweathermap.org/img/w/' + iconIndex + ".png";
         let weatherIcon = $('<img>').attr("src", iconURL);
         let day = $('<h3>').text(response.list[i].dt_txt.split(' ', 1)).addClass('todayEl');
         let cardContainer = $('<div>').addClass('cardContainer');
